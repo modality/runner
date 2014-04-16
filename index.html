@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Endless Runner</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="main">
+  <div class="distance"></div>
+  <div class="final-score"></div>
+  <div class="high-score"></div>
+  <div class="display">
+    <canvas id="main-canvas" style="width:480;height:320px">
+      <p>Hang on! Your browser doesn't support the &lt;canvas&gt; tag! You should get on that.</p>
+    </canvas>
+  </div>
+</div>
+<script type="text/javascript" src="js/lib/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/lib/squarepig.js"></script>
+<script type="text/javascript" src="js/image_loader.js"></script>
+<script type="text/javascript" src="js/controllers/game_controller.js"></script>
+<script type="text/javascript" src="js/controllers/level_generator.js"></script>
+<script type="text/javascript" src="js/ents/base.js"></script>
+<script type="text/javascript" src="js/ents/runner.js"></script>
+<script type="text/javascript" src="js/ents/runner_physics.js"></script>
+<script type="text/javascript" src="js/ents/runner_graphics.js"></script>
+<script type="text/javascript" src="js/ents/block.js"></script>
+<script type="text/javascript" src="js/ents/obstacle.js"></script>
+<script type="text/javascript" src="js/ents/shoefiti.js"></script>
+<script type="text/javascript" src="js/ents/powerup.js"></script>
+<script type="text/javascript" src="js/ents/background.js"></script>
+<script type="text/javascript" src="js/ents/interface.js"></script>
+<script type="text/javascript" src="js/assets.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    var main = new Main();
+    main.init();
+  });
+</script>
+</body>
+</html>

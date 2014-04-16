@@ -1,0 +1,43 @@
+body {
+  background: #FFFFFF;
+}
+
+#main {
+  margin: 20px auto;
+  width: 480px;
+}
+
+#main-canvas {
+  width: 480px;
+  height: 320px;
+}
+
+.display {
+  width: 480px;
+  height: 320px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px;
+}
+
+.distance {
+  position: absolute;
+  padding-left: 80px;
+  padding-top: 44px;
+}
+
+.final-score {
+  position: absolute;
+  color: red;
+  width: 480px;
+  text-align: center;
+  padding-top: 180px;
+  font-size: 30px;
+}
+
+.high-score {
+  position: absolute;
+  color: cyan;
+  width: 480px;
+  text-align: center;
+  padding-top: 220px;
+  font-size: 24px;
+}
