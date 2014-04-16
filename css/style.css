@@ -1,5 +1,6 @@
 body {
   background: #FFFFFF;
+  -webkit-user-select: none;
 }
 
 #main {

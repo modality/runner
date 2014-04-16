@@ -18,6 +18,14 @@ var Main = function() {
         game_controller.reset();
       });
 
+      pig.canvas.addEventListener("touchstart", function(e) {
+        game_controller.mouseDown.call(game_controller, e);
+      }, false);
+
+      pig.canvas.addEventListener("touchend", function(e) {
+        game_controller.mouseUp.call(game_controller, e);
+      }, false)
+
       pig.fps = 24;
       pig.run();
     });
