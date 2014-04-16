@@ -25,7 +25,7 @@ var Assets = function() {
   }
 
   function onProgress(loaded, total) {
-    console.log("loaded", loaded, "out of", total);
+    //console.log("loaded", loaded, "out of", total);
   }
 
   function onComplete(images) {

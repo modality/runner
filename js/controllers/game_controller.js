@@ -6,6 +6,7 @@ var GameController = function() {
   var distanceTraveled, segmentMarker;
   var gameEnded, canReset;
   var highScore = 0;
+  var spacebar = false;
 
   this.reset = function() {
     if(runner) this.remove(runner);
@@ -72,8 +73,28 @@ var GameController = function() {
     }
   };
 
+  this.mouseUp = function(event) {
+    if(runner.state() == "running") {
+      runner.jump();
+    }
+  };
+
+  this.keyDown = function(event) {
+    if(pig.keysPressed[pig.key.SPACE]) {
+      spacebar = true;
+      this.mouseDown();
+    }
+  };
+
+  this.keyUp = function(event) {
+    if(!pig.keysPressed[pig.key.SPACE]) {
+      pacebar = false;
+      this.mouseUp();
+    }
+  }
+
   this.acceptInput = function() {
-    return interface.getState() == "score" && pig.mouse.pressed;
+    return interface.getState() == "score" && (pig.mouse.pressed || spacebar);
   }
 
   this.gameOver = function() {
@@ -81,12 +102,6 @@ var GameController = function() {
     gameEnded = true;
   };
 
-
-  this.mouseUp = function(event) {
-    if(runner.state() == "running") {
-      runner.jump();
-    }
-  };
 
   this.addSegment = function(initial) {
     var offset = segmentMarker - distanceTraveled;

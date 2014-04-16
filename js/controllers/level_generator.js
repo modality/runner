@@ -23,7 +23,7 @@ var LevelGenerator = function() {
           break;
         case "M":
           scene.add(new Block((i*40) + offset, 280));
-          scene.add(new Obstacle((i*40) + offset, 250));
+          scene.add(new Obstacle((i*40) + offset, 245));
           break;
         case "P":
           scene.add(new Block((i*40) + offset, 280));

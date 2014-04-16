@@ -13,7 +13,7 @@ var Obstacle = function(x, y) {
 
   this.updateRect = function() {
     this.rect.x = this.x;
-    this.rect.y = this.y;
+    this.rect.y = this.y + 80 * (pig.world.getElevation() / pig.canvas.height);
     this.rect.w = 40;
     this.rect.h = 55;
   };
